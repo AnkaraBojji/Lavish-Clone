@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu – Lavish</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <nav id="navbar">
+    <div class="nav-logo"><span>LAVISH</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <button class="nav-reserve" onclick="openModal()">RESERVATION</button>
+    <div class="hamburger" onclick="toggleMobile()"><span></span><span></span><span></span></div>
+  </nav>
+
+  <section class="menu-section" id="menu" style="padding-top:120px;">
+    <div class="menu-header reveal">
+      <div class="section-eyebrow"><span>Our Menu</span></div>
+      <h2 class="section-title">A Place Where Food Comes <em>Together</em></h2>
+      <p>Experience authentic flavors of India — from tandoors of the North to tiffins of the South.</p>
+    </div>
+
+    <div class="menu-tags">
+      <button class="menu-tag active" data-filter="all">All Menu</button>
+      <button class="menu-tag" data-filter="starters">Starters</button>
+      <button class="menu-tag" data-filter="wraps">Wraps</button>
+      <button class="menu-tag" data-filter="kebabs">Kebabs</button>
+      <button class="menu-tag" data-filter="veg main course">Veg. Main Course</button>
+      <button class="menu-tag" data-filter="non veg main course">Non-Veg. Main Course</button>
+      <button class="menu-tag" data-filter="biryani">Biryani</button>
+      <button class="menu-tag" data-filter="fried rice">Fried Rice</button>
+      <button class="menu-tag" data-filter="bread">Bread</button>
+      <button class="menu-tag" data-filter="dosa">Dosa</button>
+      <button class="menu-tag" data-filter="soup">Soup</button>
+      <button class="menu-tag" data-filter="drinks">Drinks</button>
+    </div>
+
+    <div class="menu-grid">
+
+      <!-- STARTERS -->
+      <div class="menu-card" data-category="starters">
+        <div class="menu-card-img"><img src="images/paneer-65.png" alt="Paneer 65" /></div>
+        <div class="menu-card-body">
+          <h4>Paneer 65</h4>
+          <p>Spicy deep-fried paneer cubes tossed with curry leaves and green chilies.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">120.000 VND</span><span class="menu-tag-badge">Veg</span>
+        </div>
+      </div>
+      <div class="menu-card" data-category="starters">
+        <div class="menu-card-img"><img src="images/chicken-65.png" alt="Chicken 65" /></div>
+        <div class="menu-card-body">
+          <h4>Chicken 65</h4>
+          <p>Classic South Indian spicy deep-fried tempered chicken starter.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">110.000 VND</span><span
+            class="menu-tag-badge non-veg">Non-Veg</span></div>
+      </div>
+      <div class="menu-card" data-category="starters">
+        <div class="menu-card-img"><img src="images/gobi-65.png" alt="Gobi 65" /></div>
+        <div class="menu-card-body">
+          <h4>Gobi 65</h4>
+          <p>Crispy cauliflower florets tossed in a spicy South Indian masala.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">90.000 VND</span><span class="menu-tag-badge">Veg</span>
+        </div>
+      </div>
+      <div class="menu-card" data-category="starters">
+        <div class="menu-card-img"><img src="images/hara-bhara-kebab.png" alt="Hara Bhara Kebab" />
+        </div>
+        <div class="menu-card-body">
+          <h4>Hara Bhara Kebab</h4>
+          <p>Green patties made with spinach, peas and mashed potatoes.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">110.000 VND</span><span class="menu-tag-badge">Veg</span>
+        </div>
+      </div>
+      <div class="menu-card" data-category="starters">
+        <div class="menu-card-img"><img src="images/vegetable-samosa.png" alt="Vegetable Samosa" />
+        </div>
+        <div class="menu-card-body">
+          <h4>Vegetable Samosa</h4>
+          <p>Golden fried pastry stuffed with spiced potatoes and peas.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">59.000 VND</span><span class="menu-tag-badge">Veg</span>
+        </div>
+      </div>
+      <div class="menu-card" data-category="starters">
+        <div class="menu-card-img"><img src="images/fish-65.png" alt="Fish 65" /></div>
+        <div class="menu-card-body">
+          <h4>Fish 65</h4>
+          <p>Crispy batter-fried fish with coastal spices and curry leaves.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">115.000 VND</span><span
+            class="menu-tag-badge non-veg">Non-Veg</span></div>
+      </div>
+
+      <!-- WRAPS -->
+      <div class="menu-card" data-category="wraps">
+        <div class="menu-card-img"><img src="images/paneer-tikka-wrap.png" alt="Paneer Tikka Wrap" /></div>
+        <div class="menu-card-body">
+          <h4>Paneer Tikka Wrap</h4>
+          <p>Grilled paneer tikka with mint chutney wrapped in soft bread.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">100.000 VND</span><span class="menu-tag-badge">Veg</span>
+        </div>
+      </div>
+      <div class="menu-card" data-category="wraps">
+        <div class="menu-card-img"><img src="images/Chicken-tikka-wrap.png" alt="Chicken Tikka Wrap" /></div>
+        <div class="menu-card-body">
+          <h4>Chicken Tikka Wrap</h4>
+          <p>Tender chicken tikka with fresh vegetables in a soft tortilla.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">85.000 VND</span><span
+            class="menu-tag-badge non-veg">Non-Veg</span></div>
+      </div>
+      <div class="menu-card" data-category="wraps">
+        <div class="menu-card-img"><img src="images/egg-wrap.png" alt="Egg Wrap" /></div>
+        <div class="menu-card-body">
+          <h4>Egg Wrap</h4>
+          <p>Spiced scrambled eggs wrapped in a soft flatbread with chutney.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">65.000 VND</span><span
+            class="menu-tag-badge non-veg">Non-Veg</span></div>
+      </div>
+
+      <!-- KEBABS -->
+      <div class="menu-card" data-category="kebabs">
+        <div class="menu-card-img"><img src="images/paneer-tikka.png" alt="Paneer Tikka" /></div>
+        <div class="menu-card-body">
+          <h4>Paneer Tikka</h4>
+          <p>Cottage cheese marinated in spiced yogurt and grilled in the tandoor.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">119.000 VND</span><span class="menu-tag-badge">Veg</span>
+        </div>
+      </div>
+      <div class="menu-card" data-category="kebabs">
+        <div class="menu-card-img"><img src="images/chicken-tikka.png" alt="Chicken Tikka" /></div>
+        <div class="menu-card-body">
+          <h4>Chicken Tikka</h4>
+          <p>Boneless chicken marinated overnight in spices and grilled to perfection.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">149.000 VND</span><span
+            class="menu-tag-badge non-veg">Non-Veg</span></div>
+      </div>
+      <div class="menu-card" data-category="kebabs">
+        <div class="menu-card-img"><img src="images/malai-tikka.png" alt="Malai Tikka" /></div>
+        <div class="menu-card-body">
+          <h4>Malai Tikka</h4>
+          <p>Creamy, mild chicken kebabs marinated in cheese and cardamom.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">149.000 VND</span><span
+            class="menu-tag-badge non-veg">Non-Veg</span></div>
+      </div>
+      <div class="menu-card" data-category="kebabs">
+        <div class="menu-card-img"><img src="images/mutton-seek-kebab.png" alt="Mutton Seek Kebab" /></div>
+        <div class="menu-card-body">
+          <h4>Mutton Seek Kebab</h4>
+          <p>Minced mutton blended with spices and grilled on skewers.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">319.000 VND</span><span
+            class="menu-tag-badge non-veg">Non-Veg</span></div>
+      </div>
+      <div class="menu-card" data-category="kebabs">
+        <div class="menu-card-img"><img src="images/tandoori-chicken-half.png" alt="Tandoori Chicken" /></div>
+        <div class="menu-card-body">
+          <h4>Tandoori Chicken (Half)</h4>
+          <p>Whole chicken marinated in ginger-garlic and roasted in clay oven.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">299.000 VND</span><span
+            class="menu-tag-badge non-veg">Non-Veg</span></div>
+      </div>
+
+      <!-- VEG MAIN COURSE -->
+      <div class="menu-card" data-category="veg main course">
+        <div class="menu-card-img"><img src="images/paneer-butter-masala.png" alt="Paneer Butter Masala" /></div>
+        <div class="menu-card-body">
+          <h4>Paneer Butter Masala</h4>
+          <p>Cottage cheese in a velvety tomato and butter gravy.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">139.000 VND</span><span class="menu-tag-badge">Veg</span>
+        </div>
+      </div>
+      <div class="menu-card" data-category="veg main course">
+        <div class="menu-card-img"><img src="images/palak-paneer.png" alt="Palak Paneer" /></div>
+        <div class="menu-card-body">
+          <h4>Palak Paneer</h4>
+          <p>Cottage cheese cubes in a smooth, spiced spinach gravy.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">169.000 VND</span><span class="menu-tag-badge">Veg</span>
+        </div>
+      </div>
+      <div class="menu-card" data-category="veg main course">
+        <div class="menu-card-img"><img src="images/chana-masala.png" alt="Chana Masala" /></div>
+        <div class="menu-card-body">
+          <h4>Chana Masala</h4>
+          <p>Hearty chickpeas cooked in a tangy, spiced tomato onion gravy.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">120.000 VND</span><span class="menu-tag-badge">Veg</span>
+        </div>
+      </div>
+      <div class="menu-card" data-category="veg main course">
+        <div class="menu-card-img"><img src="images/dhal-fry.png" alt="Dhal Fry" /></div>
+        <div class="menu-card-body">
+          <h4>Dhal Fry</h4>
+          <p>Yellow lentils tempered with cumin, garlic and dried red chilies.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">139.000 VND</span><span class="menu-tag-badge">Veg</span>
+        </div>
+      </div>
+      <div class="menu-card" data-category="veg main course">
+        <div class="menu-card-img"><img src="images/kadai-paneer.png" alt="Kadai Paneer" /></div>
+        <div class="menu-card-body">
+          <h4>Kadai Paneer</h4>
+          <p>Paneer with bell peppers in a bold, coarsely-ground spice gravy.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">169.000 VND</span><span class="menu-tag-badge">Veg</span>
+        </div>
+      </div>
+
+      <!-- NON VEG MAIN COURSE -->
+      <div class="menu-card" data-category="non veg main course">
+        <div class="menu-card-img"><img src="images/butter-chicken-masala.png" alt="Butter Chicken Masala" /></div>
+        <div class="menu-card-body">
+          <h4>Butter Chicken Masala</h4>
+          <p>Tender chicken in a rich, creamy tomato-based sauce with aromatic spices.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">179.000 VND</span><span
+            class="menu-tag-badge non-veg">Non-Veg</span></div>
+      </div>
+      <div class="menu-card" data-category="non veg main course">
+        <div class="menu-card-img"><img src="images/chicken-tikka-masala.png" alt="Chicken Tikka Masala" /></div>
+        <div class="menu-card-body">
+          <h4>Chicken Tikka Masala</h4>
+          <p>Grilled chicken in a smoky, spiced tomato cream sauce.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">179.000 VND</span><span
+            class="menu-tag-badge non-veg">Non-Veg</span></div>
+      </div>
+      <div class="menu-card" data-category="non veg main course">
+        <div class="menu-card-img"><img src="images/mutton-rogan-josh.png" alt="Mutton Rogan Josh" /></div>
+        <div class="menu-card-body">
+          <h4>Mutton Rogan Josh</h4>
+          <p>Traditional Kashmiri lamb curry slow-cooked with whole spices.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">249.000 VND</span><span
+            class="menu-tag-badge non-veg">Non-Veg</span></div>
+      </div>
+      <div class="menu-card" data-category="non veg main course">
+        <div class="menu-card-img"><img src="images/fish-curry.png" alt="Fish Curry" /></div>
+        <div class="menu-card-body">
+          <h4>Fish Curry</h4>
+          <p>Fresh fish in a tangy South Indian coconut-tomato curry.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">200.000 VND</span><span
+            class="menu-tag-badge non-veg">Non-Veg</span></div>
+      </div>
+      <div class="menu-card" data-category="non veg main course">
+        <div class="menu-card-img"><img src="images/prawn-masala.png" alt="Prawn Masala" /></div>
+        <div class="menu-card-body">
+          <h4>Prawn Masala</h4>
+          <p>Juicy prawns cooked in a spicy onion-tomato masala with coastal spices.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">189.000 VND</span><span
+            class="menu-tag-badge non-veg">Non-Veg</span></div>
+      </div>
+
+      <!-- BIRYANI -->
+      <div class="menu-card" data-category="biryani">
+        <div class="menu-card-img"><img src="images/chicken-biryani.png" alt="Chicken Biryani" />
+        </div>
+        <div class="menu-card-body">
+          <h4>Chicken Biryani</h4>
+          <p>Fragrant Basmati rice cooked with chicken and whole spices on Dum.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">179.000 VND</span><span
+            class="menu-tag-badge non-veg">Non-Veg</span></div>
+      </div>
+      <div class="menu-card" data-category="biryani">
+        <div class="menu-card-img"><img src="images/mutton-biryani.png" alt="Mutton Biryani" /></div>
+        <div class="menu-card-body">
+          <h4>Mutton Biryani</h4>
+          <p>Slow-cooked tender mutton with saffron-infused Basmati rice.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">229.000 VND</span><span
+            class="menu-tag-badge non-veg">Non-Veg</span></div>
+      </div>
+      <div class="menu-card" data-category="biryani">
+        <div class="menu-card-img"><img src="images/vegetable-biryani.png" alt="Vegetable Biryani" /></div>
+        <div class="menu-card-body">
+          <h4>Vegetable Biryani</h4>
+          <p>Seasonal vegetables and Basmati rice layered with saffron and herbs.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">149.000 VND</span><span class="menu-tag-badge">Veg</span>
+        </div>
+      </div>
+      <div class="menu-card" data-category="biryani">
+        <div class="menu-card-img"><img src="images/prawn-biryani.png" alt="Prawn Biryani" /></div>
+        <div class="menu-card-body">
+          <h4>Prawn Biryani</h4>
+          <p>Succulent prawns cooked with fragrant basmati rice and whole spices.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">219.000 VND</span><span
+            class="menu-tag-badge non-veg">Non-Veg</span></div>
+      </div>
+
+      <!-- FRIED RICE -->
+      <div class="menu-card" data-category="fried rice">
+        <div class="menu-card-img"><img src="images/egg-fried-rice.png" alt="Egg Fried Rice" /></div>
+        <div class="menu-card-body">
+          <h4>Egg Fried Rice</h4>
+          <p>Indo-Chinese wok-tossed rice with scrambled eggs and spring onions.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">100.000 VND</span><span
+            class="menu-tag-badge non-veg">Non-Veg</span></div>
+      </div>
+      <div class="menu-card" data-category="fried rice">
+        <div class="menu-card-img"><img src="images/chicken-fried-rice.png" alt="Chicken Fried Rice" /></div>
+        <div class="menu-card-body">
+          <h4>Chicken Fried Rice</h4>
+          <p>Wok-tossed rice with tender chicken pieces and Indo-Chinese spices.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">139.000 VND</span><span
+            class="menu-tag-badge non-veg">Non-Veg</span></div>
+      </div>
+      <div class="menu-card" data-category="fried rice">
+        <div class="menu-card-img"><img src="images/veg-fried-rice.png" alt="Veg Fried Rice" /></div>
+        <div class="menu-card-body">
+          <h4>Veg Fried Rice</h4>
+          <p>Stir-fried rice with fresh seasonal vegetables and soy sauce.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">90.000 VND</span><span class="menu-tag-badge">Veg</span>
+        </div>
+      </div>
+      <div class="menu-card" data-category="fried rice">
+        <div class="menu-card-img"><img src="images/veg-schezwan-rice.png" alt="Veg Schezwan Rice" /></div>
+        <div class="menu-card-body">
+          <h4>Veg Schezwan Rice</h4>
+          <p>Spicy rice tossed with vegetables and fiery Schezwan sauce.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">100.000 VND</span><span class="menu-tag-badge">Veg</span>
+        </div>
+      </div>
+
+      <!-- BREAD -->
+      <div class="menu-card" data-category="bread">
+        <div class="menu-card-img"><img src="images/garlic-naan.png" alt="Garlic Naan" /></div>
+        <div class="menu-card-body">
+          <h4>Garlic Naan</h4>
+          <p>Soft leavened bread brushed with garlic butter, baked in the tandoor.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">40.000 VND</span><span class="menu-tag-badge">Veg</span>
+        </div>
+      </div>
+      <div class="menu-card" data-category="bread">
+        <div class="menu-card-img"><img src="images/butter-naan.png" alt="Butter Naan" /></div>
+        <div class="menu-card-body">
+          <h4>Butter Naan</h4>
+          <p>Fluffy tandoor-baked bread brushed generously with melted butter.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">35.000 VND</span><span class="menu-tag-badge">Veg</span>
+        </div>
+      </div>
+      <div class="menu-card" data-category="bread">
+        <div class="menu-card-img"><img src="images/tandoori-roti.png" alt="Tandoori Roti" /></div>
+        <div class="menu-card-body">
+          <h4>Tandoori Roti</h4>
+          <p>Whole wheat flatbread baked fresh in a traditional tandoor oven.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">30.000 VND</span><span class="menu-tag-badge">Veg</span>
+        </div>
+      </div>
+      <div class="menu-card" data-category="bread">
+        <div class="menu-card-img"><img src="images/cheese-naan.png" alt="Cheese Naan" /></div>
+        <div class="menu-card-body">
+          <h4>Cheese Naan</h4>
+          <p>Soft naan stuffed with melted cheese, baked in the tandoor.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">45.000 VND</span><span class="menu-tag-badge">Veg</span>
+        </div>
+      </div>
+
+      <!-- DOSA -->
+      <div class="menu-card" data-category="dosa">
+        <div class="menu-card-img"><img src="images/Masala-Dosa-1.png" alt="Masala Dosa" /></div>
+        <div class="menu-card-body">
+          <h4>Masala Dosa</h4>
+          <p>Thin crispy rice crepe filled with spiced potato mash and served with sambar.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">95.000 VND</span><span class="menu-tag-badge">Veg</span>
+        </div>
+      </div>
+      <div class="menu-card" data-category="dosa">
+        <div class="menu-card-img"><img src="images/Onion-Masala-Dosa.png" alt="Onion Masala Dosa" /></div>
+        <div class="menu-card-body">
+          <h4>Onion Masala Dosa</h4>
+          <p>Crispy dosa topped with caramelized onions and spiced potato filling.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">115.000 VND</span><span class="menu-tag-badge">Veg</span>
+        </div>
+      </div>
+      <div class="menu-card" data-category="dosa">
+        <div class="menu-card-img"><img src="images/Dosa.png" alt="Plain Dosa" /></div>
+        <div class="menu-card-body">
+          <h4>Plain Dosa</h4>
+          <p>Classic thin crispy rice and lentil crepe served with sambar and chutney.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">85.000 VND</span><span class="menu-tag-badge">Veg</span>
+        </div>
+      </div>
+
+      <!-- SOUP -->
+      <div class="menu-card" data-category="soup">
+        <div class="menu-card-img"><img src="images/tomato-soup.png" alt="Tomato Soup" /></div>
+        <div class="menu-card-body">
+          <h4>Tomato Soup (Spicy)</h4>
+          <p>Rich spiced tomato soup with Indian herbs and a hint of cream.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">45.000 VND</span><span class="menu-tag-badge">Veg</span>
+        </div>
+      </div>
+      <div class="menu-card" data-category="soup">
+        <div class="menu-card-img"><img src="images/sweet-corn-chicken-soup.png" alt="Sweet Corn Chicken Soup" /></div>
+        <div class="menu-card-body">
+          <h4>Sweet Corn Chicken Soup</h4>
+          <p>Creamy Indo-Chinese sweet corn soup with tender chicken pieces.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">60.000 VND</span><span
+            class="menu-tag-badge non-veg">Non-Veg</span></div>
+      </div>
+      <div class="menu-card" data-category="soup">
+        <div class="menu-card-img"><img src="images/hot-sour-vegetable-soup.png" alt="Hot Sour Veg Soup" /></div>
+        <div class="menu-card-body">
+          <h4>Hot &amp; Sour Veg Soup</h4>
+          <p>Tangy and spicy Indo-Chinese soup loaded with vegetables.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">45.000 VND</span><span class="menu-tag-badge">Veg</span>
+        </div>
+      </div>
+
+      <!-- DRINKS -->
+      <div class="menu-card" data-category="drinks">
+        <div class="menu-card-img"><img src="images/mango-lassi.png" alt="Mango Lassi" /></div>
+        <div class="menu-card-body">
+          <h4>Mango Lassi</h4>
+          <p>Thick, creamy yogurt drink blended with fresh mango pulp.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">49.000 VND</span><span class="menu-tag-badge">Veg</span>
+        </div>
+      </div>
+      <div class="menu-card" data-category="drinks">
+        <div class="menu-card-img"><img src="images/indian-masala-tea.png" alt="Indian Masala Tea" /></div>
+        <div class="menu-card-body">
+          <h4>Indian Masala Tea (Chaai)</h4>
+          <p>Aromatic spiced tea brewed with ginger, cardamom and cinnamon.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">30.000 VND</span><span class="menu-tag-badge">Veg</span>
+        </div>
+      </div>
+      <div class="menu-card" data-category="drinks">
+        <div class="menu-card-img"><img src="images/cold-coffee.png" alt="Cold Coffee" /></div>
+        <div class="menu-card-body">
+          <h4>Cold Coffee</h4>
+          <p>Chilled blended coffee with milk and a hint of sweetness.</p>
+        </div>
+        <div class="menu-card-footer"><span class="menu-price">45.000 VND</span><span class="menu-tag-badge">Veg</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <div class="footer-brand-name">LAVISH</div>
+        <p>A culinary journey that brings you the true taste of India. Located in the heart of Ocean Park, Lavish offers
+          a warm and elegant ambiance with a diverse menu.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/LavishOceanPark" class="social-link" target="_blank"><i
+              class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/lavishthemulticuisine" class="social-link" target="_blank"><i
+              class="fab fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@lavishthemulticuisine" class="social-link" target="_blank"><i
+              class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>About</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#">Order Delivery</a></li>
+          <li><a href="#">Payment &amp; Tax</a></li>
+          <li><a href="#">Terms of Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Facilities</h4>
+        <ul>
+          <li><a href="#">The Fontus Spa</a></li>
+          <li><a href="#">Experiences</a></li>
+          <li><a href="#">Private Functions</a></li>
+          <li><a href="#">Gallery, Events</a></li>
+          <li><a href="#">Special Offers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>Branch 1: 01S20, S208, Vinhomes
+            Ocean Park, Gia Lam, Hanoi</span></div>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>Branch 2: 21 Hang Khoai, Hoan Kiem,
+            Hanoi</span></div>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><span>033 858 8350</span></div>
+        <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Mo – Su: 07:00am – 10:00pm</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 <a href="#">Lavish – The Multi Cuisine Restaurant</a>. All rights reserved.
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="reservationModal" onclick="closeModalOutside(event)">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <h3>Reserve Your Table</h3>
+      <p>Fill in your details and we'll confirm your reservation shortly.</p>
+      <div class="booking-form" style="gap:14px;">
+        <div class="form-row">
+          <div class="form-group"><label>Name</label><input type="text" placeholder="Your full name" /></div>
+          <div class="form-group"><label>Phone</label><input type="tel" placeholder="Your phone" /></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Persons</label><select>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5+</option>
+            </select></div>
+          <div class="form-group"><label>Date</label><input type="date" /></div>
+        </div>
+        <div class="form-group"><label>Time</label><input type="time" min="07:00" max="22:00" /></div>
+        <div class="form-group"><label>Special Requirements</label><textarea placeholder="Any requests..."
+            style="min-height:60px;"></textarea></div>
+        <button class="btn-book" onclick="handleModalBooking()">Booking Now</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
